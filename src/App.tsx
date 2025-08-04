@@ -1,7 +1,8 @@
-import React from 'react'
-import Home from './componenet/Home'
-
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Child from './components/Child';
+import './App.css';
 
 function App() {
  
@@ -9,8 +10,13 @@ function App() {
   return (
     <>
  <div>
- <Home/>
-  
+ <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user/:id" element={<Child/>} />
+      </Routes>
+    </BrowserRouter>
+ 
  </div>
     </>
   )

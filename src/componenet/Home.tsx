@@ -1,21 +1,14 @@
-import React from 'react'
-import './Home.css'
+import { Link } from "react-router-dom";
 
-function App() {
+function Home() {
   return (
-    <div className="container">
-      <header>
-        <h1>Welcome to My Vite React App</h1>
-      </header>
-      <main>
-        <p>This is the homepage with a simple layout.</p>
-        <button onClick={() => alert('Hello!')}>Click me</button>
-      </main>
-      <footer>
-        <small>&copy; {new Date().getFullYear()} My Website</small>
-      </footer>
+    <div>
+      <h1>🏠 Home Page</h1>
+      <p>Click to see user profile:</p>
+
+      <Link to="/user/101">Go to User 101</Link>
     </div>
-  )
+  );
 }
 
-export default App
+export default Home;
